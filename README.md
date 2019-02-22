@@ -18,6 +18,10 @@ Install packages from Pipfile:
 ```
 $ pipenv install
 ```
+Activate the Pipenv shell:
+```
+$ pipenv shell
+```
 
 Set the environment variable and run the app:
 ```
