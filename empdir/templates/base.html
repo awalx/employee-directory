@@ -8,10 +8,24 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block navbar %}
-<div class="navbar navbar-fixed-top">
-  <!-- ... -->
+<div class="navbar navbar-fixed-top navbar-dark bg-dark">
+  <a href="#" class="navbar-brand col-md-2">Employees Directory</a>  
 </div>
 {% endblock %}
 
-{% block content %}{% endblock %}
-
+{% block content %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 bg-light text-white" id="sidebar">
+      <ul class="nav flex-column navbar-dark">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Table</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-10">
+      {% block main %}{% endblock %}
+    </div>
+  </div>     
+</div>
+{% endblock %}
