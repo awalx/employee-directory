@@ -1,5 +1,24 @@
 {% extends 'base.html' %}
 
 {% block main %}
-    <h1>Hello World!</h1>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Title</th>
+                <th scope="col">Reports To</th>
+                <th scope="col">Hire Date</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for e in employees %}
+            {%  include '_post.html' %}
+        {% endfor %}
+                  
+        </tbody>
+    </table>
 {% endblock %}
